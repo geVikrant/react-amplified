@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         
         <p>
-          Hello & Welcome to base React App !
+          Hello & Welcome to New React App !
         </p>
         <a
           className="App-link"
