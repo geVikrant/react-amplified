@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         
         <p>
-          Hello & Welcome to base React App !
+          Hello & Welcome to New React App !
         </p>
         <a
           className="App-link"
@@ -21,5 +21,20 @@ function App() {
     </div>
   );
 }
+
+class HelloMessage extends React.Component {
+  render() {
+    return (
+      <div>
+        Hello {this.props.name}
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <HelloMessage name="Taylor" />,
+  document.getElementById('hello-example')
+);
 
 export default App;
