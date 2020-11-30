@@ -1,0 +1,49 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "ironLambda",
+            "privacy": {
+                "protected": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ],
+                "unauth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ]
+            },
+            "policyResourceName": "/items"
+        }
+    ],
+    "resourceName": "ironApi",
+    "apiName": "ironApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "ironLambda"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 1,
+        "authRoleName": "amplify-reactamplified-dev-152932-authRole",
+        "unAuthRoleName": "amplify-reactamplified-dev-152932-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "ironLambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
