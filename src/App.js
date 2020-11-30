@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import Amplify, { API } from 'aws-amplify';
+import awsconfig from './aws-exports';
 
+Amplify.configure(awsconfig);
 function App() {
   return (
     <div className="App">
@@ -11,7 +14,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://aws.amazon.com/amplify/"
+          href="https://docs.amplify.aws/"
           target="_blank"
           rel="noopener noreferrer"
         >
